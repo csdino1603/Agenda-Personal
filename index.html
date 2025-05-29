@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Personal Interactiva</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mi Agenda Personal</h1>
+            <p>Organiza tus tareas diarias</p>
+        </header>
+
+        <div class="main-content">
+            <div class="task-form">
+                <h2>Nueva Tarea</h2>
+                <form id="taskForm">
+                    <div class="form-group">
+                        <label for="title">Título*</label>
+                        <input type="text" id="title" placeholder="Título de la tarea" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Descripción</label>
+                        <textarea id="description" placeholder="Descripción detallada"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="dueDate">Fecha de Vencimiento*</label>
+                        <input type="date" id="dueDate" required>
+                    </div>
+                    <button type="submit" id="saveBtn">Guardar Tarea</button>
+                    <button type="button" id="cancelBtn" style="display: none;">Cancelar</button>
+                </form>
+            </div>
+
+            <div class="task-list">
+                <h2>Mis Tareas</h2>
+                <div class="filter-options">
+                    <button id="allTasks" class="active">Todas</button>
+                    <button id="pendingTasks">Pendientes</button>
+                    <button id="completedTasks">Completadas</button>
+                </div>
+                <div id="tasksContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="code.js"></script>
+</body>
+</html>
